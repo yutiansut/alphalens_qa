@@ -31,11 +31,11 @@ extra_reqs = {
 
 if __name__ == "__main__":
     setup(
-        name='alphalens',
+        name='alphalens_qa',
         version=versioneer.get_version(),
         cmdclass=versioneer.get_cmdclass(),
         description='Performance analysis of predictive (alpha) stock factors',
-        author='Quantopian Inc.',
+        author=['Quantopian Inc.','yutiansut'],
         author_email='opensource@quantopian.com',
         packages=find_packages(include='alphalens.*'),
         package_data={
@@ -56,7 +56,7 @@ if __name__ == "__main__":
             'Topic :: Office/Business :: Financial',
             'Topic :: Scientific/Engineering :: Information Analysis',
         ],
-        url='https://github.com/quantopian/alphalens',
+        url='https://github.com/yutiansut/alphalens',
         install_requires=install_reqs,
         extras_require=extra_reqs,
     )

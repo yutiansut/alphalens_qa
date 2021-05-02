@@ -676,6 +676,8 @@ def get_clean_factor_and_forward_returns(factor,
                                          zero_aware=False,
                                          cumulative_returns=True):
     """
+    Modified:  增加对于.drop_duplicates()
+
     Formats the factor data, pricing data, and group mappings into a DataFrame
     that contains aligned MultiIndex indices of timestamp and asset. The
     returned data will be formatted to be suitable for Alphalens functions.
@@ -832,7 +834,7 @@ def get_clean_factor_and_forward_returns(factor,
         cumulative_returns,
     )
 
-    factor_data = get_clean_factor(factor, forward_returns, groupby=groupby,
+    factor_data = get_clean_factor(factor.drop_duplicates(), forward_returns.drop_duplicates(), groupby=groupby,
                                    groupby_labels=groupby_labels,
                                    quantiles=quantiles, bins=bins,
                                    binning_by_group=binning_by_group,

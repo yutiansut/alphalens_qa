@@ -31,10 +31,10 @@ extra_reqs = {
 if __name__ == "__main__":
     setup(
         name='alphalens_qa',
-        version='0.2.0',
+        version='0.2.2',
         #cmdclass=versioneer.get_cmdclass(),
         description='Performance analysis of predictive (alpha) stock factors',
-        packages=find_packages(include='alphalens.*'),
+        packages=['alphalens'],
         url='https://github.com/yutiansut/alphalens',
         install_requires=install_reqs,
         extras_require=extra_reqs,

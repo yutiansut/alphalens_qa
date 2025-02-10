@@ -30,7 +30,7 @@ extra_reqs = {
 
 if __name__ == "__main__":
     setup(
-        name='alphalens_qa',
+        name='alphalens',
         version='0.2.2',
         #cmdclass=versioneer.get_cmdclass(),
         description='Performance analysis of predictive (alpha) stock factors',
